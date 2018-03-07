@@ -1,0 +1,92 @@
+body{
+    margin: 0 auto;
+    width: 500px;
+}
+.headClass{
+    font-family: cursive;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(23, 64, 90);
+    font-weight: bolder;
+    border: 3px rgb(44, 122, 170) inset; 
+}
+.btnClass{
+    text-align:center;
+}
+#msgDiv{
+    font-family: cursive;
+    font-size: 15px;
+    color: rgb(23, 64, 90);
+}
+
+.mainDiv{
+    width:500px;
+    height:550px;
+    background-image: url("bkimg.jpeg");
+    
+}
+#sokoban{
+    position: relative;
+}
+.spaceColumn{
+    min-width:50px;
+    min-height:800px;
+    float: left;
+}
+.spaceRow{
+    min-height:50px;   
+}
+.brickCell{
+    min-height: 50px;
+    min-width: 50px;
+    background-image: url("brick.jpeg");
+}
+.boxCell{
+    min-height: 48px;
+    min-width: 48px;
+    border: 1px rgb(33, 91, 128) ridge;
+    background-color:  rgb(23, 64, 90);
+    background-image: url("box.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.storedCell{
+    min-height: 48px;
+    min-width: 48px;
+    border: 1px rgb(33, 91, 128) ridge;
+    background-color:  rgb(23, 64, 90);
+    background-image: url("box1.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.starCell{
+    min-height: 48px;
+    min-width: 48px;
+    border: 1px rgb(33, 91, 128) ridge;
+    background-color: rgb(23, 64, 90);
+    background-image: url("star.png") ;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.emptyCell{
+    min-height: 48px;
+    min-width: 48px;
+    border: 1px rgb(33, 91, 128) ridge;
+    background-color:  rgb(23, 64, 90);
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.row{
+    display: flex;
+    flex-direction: row; 
+}
+.player{
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    border: 1px rgb(33, 91, 128) ridge;
+    background-color:  rgb(23, 64, 90);
+    background-image: url("player1.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+}
