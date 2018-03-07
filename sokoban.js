@@ -49,28 +49,27 @@ const map1 = [
     "    WWWWWWW        "
  ] ;
 
-
 var cell;
 var sokoban=document.getElementById("sokoban");
-var totalBoxes=0;
 var player=document.getElementById("player");
 var x;
 var y;
 var topPoint=0;
 var leftPoint=0;
+var totalBoxes=0;
 var storedBoxCount=0;
 var xLen=map.length;
 var yLen=map[xLen-1].length;
 var cellClass="emptyCell";
+
 drawSokoban();
 
 movePlayer = function (event) {
-       
+    //To prevent the scrolling of the page    
     if([32, 37, 38, 39, 40].indexOf(event.keyCode) > -1) {
         event.preventDefault();
     }
     if (storedBoxCount<totalBoxes){
-            
        currentCell=document.getElementById(""+x+y);
        switch (event.key){
             case "ArrowUp":
@@ -118,6 +117,7 @@ movePlayer = function (event) {
     }   
 }
 
+//This function changes the map array element when up or down key is pressed
 function arrowUPDownFunc(){
     if (map[x1][y]=="B"){
         if (map[x2][y]==" "){
@@ -151,6 +151,7 @@ function arrowUPDownFunc(){
     }
 }
 
+//This function changes the map array element when right or left key is pressed
 function arrowRightLeftFunc(){
     if (map[x][y1]=="B"){
        if (map[x][y2]==" "){
@@ -167,7 +168,6 @@ function arrowRightLeftFunc(){
         }
     }    
     else if (map[x][y1]=="X"){
-        
         currentCell.setAttribute("class",cellClass); 
         if (map[x][y2]==" ") {
             y=y1;
@@ -186,6 +186,7 @@ function arrowRightLeftFunc(){
         y=y1; 
     }
 }
+//This function redraws the row in the sokoban grid
 function updateMapRow(str,n){
    for (let j=0;j<str.length;j++){
         cell=document.getElementById(""+n+j);
@@ -208,9 +209,12 @@ function updateMapRow(str,n){
     }    
 }
 
+//Replace a char at nth location in the string str with the replacedChar
 function updateString(str,n,replacedChar){
    return  str.substring(0, n) + replacedChar + str.substring(n+1);   
 }
+
+//Draw the Sokoban grid
 function drawSokoban(){
     var rowSokoban;
     var row;
