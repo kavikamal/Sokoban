@@ -117,7 +117,7 @@ movePlayer = function (event) {
     }   
 }
 
-//This function changes the map array element when up or down key is pressed
+//This function updates the map array string element when up or down key is pressed
 function arrowUPDownFunc(){
     if (map[x1][y]=="B"){
         if (map[x2][y]==" "){
@@ -143,7 +143,7 @@ function arrowUPDownFunc(){
             x=x1;
             map[x1]=updateString(map[x1],y,'O');
             map[x2]=updateString(map[x2],y,'X');
-            storedBoxCount--;
+            //storedBoxCount--;
         }   
     }
     else if ((map[x1][y]==" ")||(map[x1][y]=="O")){
@@ -151,7 +151,7 @@ function arrowUPDownFunc(){
     }
 }
 
-//This function changes the map array element when right or left key is pressed
+//This function updates the map array string element when right or left key is pressed
 function arrowRightLeftFunc(){
     if (map[x][y1]=="B"){
        if (map[x][y2]==" "){
