@@ -1,39 +1,45 @@
 body{
     margin: 0 auto;
-    width: 500px;
+    width: 100vw;
+    background-image: url("bkimg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .headClass{
+    width:80%;
     font-family: cursive;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
-    color: rgb(23, 64, 90);
-    font-weight: bolder;
-    border: 3px rgb(44, 122, 170) inset; 
+    color:white;
+    font-weight: bolder;   
 }
 .btnClass{
+    width:80%;
     text-align:center;
 }
 #msgDiv{
+    width:80%;
     font-family: cursive;
     font-size: 15px;
-    color: rgb(23, 64, 90);
+    color: white;
+    text-align:center;
 }
 
 .mainDiv{
-    width:500px;
-    height:550px;
-    background-image: url("bkimg.jpeg");
-    
+   display: flex;
+   flex-direction: row; 
+   width:80%;
+   margin: 0 auto;
+   text-align: center;   
 }
 #sokoban{
-    position: relative;
+   position: relative;    
 }
-.spaceColumn{
-    min-width:50px;
-    min-height:800px;
-    float: left;
-}
+ .spaceColumn{
+    width:10%;  
+} 
 .spaceRow{
+    width:80%;
     min-height:50px;   
 }
 .brickCell{
