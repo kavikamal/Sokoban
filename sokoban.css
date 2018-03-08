@@ -6,7 +6,7 @@ body{
     background-size: cover;
 }
 .headClass{
-    width:80%;
+   
     font-family: cursive;
     font-size: 30px;
     text-align: center;
@@ -14,7 +14,6 @@ body{
     font-weight: bolder;   
 }
 .btnClass{
-    width:80%;
     text-align:center;
 }
 #msgDiv{
